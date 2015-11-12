@@ -14,6 +14,6 @@ public class CommandListener extends ListenerAdapter {
         if (event.getMessage().startsWith("?helloworld")) {
             event.respond("Hello World!");
         }
-        // Example thing!
+        // Example thin
     }
 }

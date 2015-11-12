@@ -10,12 +10,13 @@ import org.pircbotx.UtilSSLSocketFactory;
 public class PlexMain {
     public static void main(String[] args) throws Throwable{
         Configuration conf = new Configuration.Builder()
-                .setServerHostname("irc.esper.net")
                 .setServer("irc.esper.net", 6697)
+                .setName("TestBot")
                 .setSocketFactory(new UtilSSLSocketFactory().trustAllCertificates())
                 .addListener(new CommandListener())
-                .setLogin() //change it Later
-                .setRealName()//Change it Later
+                .setLogin("PlexTest") //change it Later
+                .setRealName("Plex")//Change it Later
+                .addAutoJoinChannel("#shinexusuk")
                 .buildConfiguration();
         PircBotX plex = new PircBotX(conf);
         plex.startBot();
